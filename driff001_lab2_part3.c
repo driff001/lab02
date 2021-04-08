@@ -37,13 +37,14 @@ int main(void) {
                  cntavail = cntavail + 1;
                  }
 		 
-                 if ( cntavail == 0x00){
-                 PORTC = 0x80;
-                 }
+                
 
                 PORTC = cntavail;
 
                                                                }
+                if ( cntavail == 0x00){
+                PORTC = 0x80;
+                }
 
 
 
