@@ -42,8 +42,8 @@ int main(void) {
                 PORTC = cntavail;
 
                                                                }
-                if ( cntavail == 0x00){
-                PINA = 0x80;
+                if ( cntavail == 0){
+                PORTC = 0x80;
                 }
 
 
