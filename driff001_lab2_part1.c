@@ -26,7 +26,7 @@ int main(void) {
                  if(PORTA == 0x01){
                  PORTB = 0x01;
                  }																	 // (clear rightmost 2 bits, then set to 01)
-		} else {
+		 else {
                  PORTB = 0x00;
                 }
 		 																		 												// 3) Write o
