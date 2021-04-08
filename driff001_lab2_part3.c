@@ -43,7 +43,7 @@ int main(void) {
 
                                                                }
                 if ( cntavail == 0x00){
-                PORTC = 0x80;
+                PINA = 0x80;
                 }
 
 
