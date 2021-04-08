@@ -28,10 +28,8 @@ int main(void) {
                  }																	 // (clear rightmost 2 bits, then set to 01)
 		} else {
                  PORTB = 0x00;
-  		 tmpB = (tmpB & 0xFC) | 0x02; // Sets tmpB to bbbbbb10
                 }
-		 																		 												// 3) Write output
-		PORTB = tmpB;	
+		 																		 												// 3) Write o
 		}
 		return 0;
 		//
