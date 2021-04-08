@@ -23,7 +23,7 @@ int main(void) {
 		// 				// 2) Perform computation
 	//if PA0 is 1, set PB1PB0 = 01, else = 10
 	         	             
-                 if(PORTA == 0x01){
+                 if(PINA == 0x01){
                  PORTB = tmpA;
                  }																	 // (clear rightmost 2 bits, then set to 01)
 		 else {
