@@ -24,10 +24,10 @@ int main(void) {
 	//if PA0 is 1, set PB1PB0 = 01, else = 10
 	         	             
                  if(PORTA == 0x01){
-                 PORTB = 0x01;
+                 PORTB = tmpA;
                  }																	 // (clear rightmost 2 bits, then set to 01)
 		 else {
-                 PORTB = 0x00;
+                 PORTB = tmpB;
                 }
 		 																		 												// 3) Write o
 		}
