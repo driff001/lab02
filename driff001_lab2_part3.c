@@ -20,14 +20,14 @@ int main(void) {
         tmpB = PINA & 0x02;
         tmpC = PINA & 0x04;
         tmpD = PINA & 0x08;
-
+        
 
 
                  if(tmpA != 0x01) {
                  cntavail = cntavail + 1;
                  }
 
-		if(tmpB != 0x02)  {
+	         if(tmpB != 0x02)  {
                  cntavail = cntavail + 1;
                  }
                  if(tmpC != 0x04){
@@ -36,10 +36,14 @@ int main(void) {
                  if(tmpD != 0x08){
                  cntavail = cntavail + 1;
                  }
+		 
+                 if ( cntavail == 0x00){
+                 PINA = 0x10;
+                 }
 
+                PORTC = cntavail;
 
-
-                PORTC = cntavail;                                                               }
+                                                               }
 
 
 
