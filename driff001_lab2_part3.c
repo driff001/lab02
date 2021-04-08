@@ -8,7 +8,7 @@ int main(void) {
 
 	DDRB = 0xFF; PORTB = 0x00;
         PORTC = 0x00;
-        unsigned char tmpB = 0x00;
+        unsigned char  = 0x00;
         unsigned char tmpA = 0x00;
         unsigned char tmpD = 0x00;
         unsigned char tmpC = 0x00;
@@ -40,12 +40,12 @@ int main(void) {
                 
 
                 PORTC = cntavail;
-
-                                                               }
-                if ( cntavail == 0x00){
+		if ( cntavail == 0x00){
                 PORTC = PORTC | 0x80;
                 }
 
+                                                               }
+               
 
 
                  return 0;
