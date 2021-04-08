@@ -7,7 +7,7 @@ int main(void) {
         DDRA = 0x00; PORTA = 0xFF;
 
 	DDRB = 0xFF; PORTB = 0x00;
-        PORTC = 0x80;
+        PORTC = 0x00;
         unsigned char tmpB = 0x00;
         unsigned char tmpA = 0x00;
         unsigned char tmpD = 0x00;
