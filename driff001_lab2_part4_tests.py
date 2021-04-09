@@ -16,5 +16,5 @@ tests = [ {'description': 'PINA: 0x00 => PORTB: 0x02',
     },
 
     ]
-~
+
 
