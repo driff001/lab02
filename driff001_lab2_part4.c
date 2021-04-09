@@ -13,7 +13,7 @@ int main(void) {
       
         
 
-                 if( PORTA >= 0x8C || PORTB >= 0x8C || PORTC >= 0x8C  ) {
+                 if( (PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)  ) {
                  PORTD = 0x01;
                  }
 
@@ -21,7 +21,7 @@ int main(void) {
 		 PORTD = 0x10;
                  }
 
-		 if ( PORTA >= 0x8C || PORTB >= 0x8C || PORTC >= 0x8C && PORTA - PORTC > 0x50){  
+		 if ( ((PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)) && (PORTA - PORTC > 0x50)){  
                  PORTD = 0x11;
 		 }
                
