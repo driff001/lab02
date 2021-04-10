@@ -4,31 +4,31 @@
 #endif
 
 int main(void) {
-        DDRA = 0x00; PORTA = 0xFF;
+        DDRA = 0x00; PINA = 0xFF;
 
-	DDRB = 0xFF; PORTB = 0x00;
-        PORTC = 0x00; PORTD = 0x00;
+	DDRB = 0xFF; PINB = 0x00;
+        PINC = 0x00; PORTD = 0x00;
         unsigned int bruh = 0x00;
-      
+      	unsigned int newn = 0x00
       
         	while(1){
 
-                 if( (PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)  ) {
-                 PORTD = 0x01;
+                 if( (PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)  ) {
+                 newn = 0x01;
                  }
 
-	         if ( PORTA - PORTC > 0x50){
-		 PORTD = 0x10;
+	         if ( PINA - PINC > 0x50){
+		 newn = 0x10;
                  }
 
-		 if ( ((PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)) && (PORTA - PORTC > 0x50)){  
-                 PORTD = 0x11;
+		 if ( ((PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)) && (PINA - PINC > 0x50)){  
+                 newn = 0x11;
 		 }
                
 		 
 
 		 }
-		 bruh = PORTA + PORTB + PORTC;
-		 PORTD = bruh | PORTD;
+		 bruh = PINA + PINB + PINC;
+		 PORTD = bruh | newn;
                  return 0;
                  }
