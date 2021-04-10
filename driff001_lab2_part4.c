@@ -11,7 +11,7 @@ int main(void) {
         unsigned int bruh = 0x00;
       
       
-        
+        	while(1){
 
                  if( (PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)  ) {
                  PORTD = 0x01;
@@ -30,6 +30,6 @@ int main(void) {
 	         
 		 
 
-
+		 }
                  return 0;
                  }
