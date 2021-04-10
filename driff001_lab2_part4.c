@@ -4,7 +4,7 @@
 #endif
 
 int main(void) {
-	PINA; PINB; PINC;
+	
         DDRA = 0x00; PORTA = PINA;
 	DDRB = 0xFF; PORTB = PINB;
         PORTC = PINC; PORTD = 0x00;
