@@ -25,7 +25,7 @@ int main(void) {
 		 }
                
 		 
-		 break;
+		 
 		 }
 	         
 		 bruh = PINA + PINB + PINC;
