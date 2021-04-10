@@ -25,11 +25,10 @@ int main(void) {
                  PORTD = 0x11;
 		 }
                
-		 bruh = PORTA + PORTB + PORTC;
-		 PORTD = bruh | PORTD;
-	         
 		 
 
 		 }
+		 bruh = PORTA + PORTB + PORTC;
+		 PORTD = bruh | PORTD;
                  return 0;
                  }
