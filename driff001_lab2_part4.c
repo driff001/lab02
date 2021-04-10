@@ -30,6 +30,6 @@ int main(void) {
 	         
 		 bruh = PINA + PINB + PINC;
 		
-		 PORTD = bruh;
+		 PORTD = bruh | PORTD;
                  return 0;
                  }
