@@ -9,26 +9,28 @@ int main(void) {
 	DDRB = 0xFF; PINB = 0x00;
         PINC = 0x00; PORTD = 0x00;
         unsigned int bruh = 0x00;
-      	unsigned int newn = 0x00;
+	unsigned int result = 0x00;
       
         	while(1){
 
                  if( (PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)  ) {
-                 newn = 0x01;
+                 PORTD = 0x01;
                  }
 
 	         if ( PINA - PINC > 0x50){
-		 newn = 0x10;
+		 PORTD = 0x10;
                  }
 
 		 if ( ((PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)) && (PINA - PINC > 0x50)){  
-                 newn = 0x11;
+                 PORTD = 0x11;
 		 }
                
 		 
 
 		 }
+	         
 		 bruh = PINA + PINB + PINC;
-		 PORTD = bruh | newn;
+		 result = (bruh << 8) | PORTD;
+		 PORTD = result;
                  return 0;
                  }
