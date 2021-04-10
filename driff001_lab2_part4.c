@@ -9,7 +9,7 @@ int main(void) {
 	DDRB = 0xFF; PINB = 0x00;
         PINC = 0x00; PORTD = 0x00;
         unsigned int bruh = 0x00;
-      	unsigned int newn = 0x00
+      	unsigned int newn = 0x00;
       
         	while(1){
 
