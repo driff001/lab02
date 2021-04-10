@@ -5,31 +5,30 @@
 
 int main(void) {
 	
-        DDRA = 0x00; PORTA = PINA;
-	DDRB = 0xFF; PORTB = PINB;
-        PORTC = PINC; PORTD = 0x00;
+        DDRA = 0x00; 
+	DDRB = 0xFF; PORTD = 0x00;
         unsigned int bruh = 0x00;
 	
       
         	while(1){
 
-                 if( (PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)  ) {
+                 if( (PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)  ) {
                  PORTD = 0x01;
                  }
 
-	         if ( PORTA - PORTC > 0x50){
+	         if ( PINA - PINC > 0x50){
 		 PORTD = 0x10;
                  }
 
-		 if ( ((PORTA >= 0x8C) || (PORTB >= 0x8C) || (PORTC >= 0x8C)) && (PORTA - PORTC > 0x50)){  
+		 if ( ((PINA >= 0x8C) || (PINB >= 0x8C) || (PINC >= 0x8C)) && (PINA - PINC > 0x50)){  
                  PORTD = 0x11;
 		 }
                
 		 
-
+		 break;
 		 }
 	         
-		 bruh = PORTA + PORTB + PORTC;
+		 bruh = PINA + PINB + PINC;
 		
 		 PORTD = bruh;
                  return 0;
