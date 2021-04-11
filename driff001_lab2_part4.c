@@ -33,7 +33,6 @@ int main(void) {
 		 }
 	         
 		 
-		
-		 PORTD = bruh | PORTD;
+	
                  return 0;
                  }
