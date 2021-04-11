@@ -8,20 +8,24 @@ int main(void) {
         PORTD = 0x00;
         unsigned int tempA = 0x00;
 	unsigned int tempB = 0x00;
+	int minus;
 	
       
         	while(1){
 		 tempB = 0;
 		 tempA = 0;
+		 minus = 0;
 		 
-		 if ( ((PINA+PINB+PINC) > 0x8C) && (PINA - PINC > 0x50)){  
+		 minus = PINA - PINC;	
+		
+		 if ( ((PINA+PINB+PINC) > 0x8C) && (minus > 0x50)){  
                  tempB = 0x11;
 		 }	
                  else if( ((PINA+PINB+PINC) > 0x8C)  ) {
                  tempB = 0x01;
                  }
 
-	         else if ( PINA - PINC > 0x50){
+	         else if ( minus > 0x50){
 		 tempB = 0x10;
                  }
 
