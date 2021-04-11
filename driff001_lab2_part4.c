@@ -24,7 +24,7 @@ int main(void) {
 		 tempB = 0b10;
                  }
 	         if ( (PINA-PINC > 0x50)  && (PINA < PINC) ) {
-		 tempB = 0b00;
+		 tempB = 0b10;
                  }
 		 if ( ((PINA+PINB+PINC) > 0x8C) && (PINA - PINC > 0x50) && (PINA > PINC) ){  
                  tempB = 0b11;
