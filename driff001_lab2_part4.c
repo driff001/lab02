@@ -20,7 +20,10 @@ int main(void) {
 		
 		 if ( ((PINA+PINB+PINC) > 0x8C) && (minus > 0x50) && (PINA > PINC) ){  
                  tempB = 0x11;
-		 }	
+		 }
+		 else if ( ((PINA+PINB+PINC) > 0x8C) && (minus > 0x50) && (PINA < PINC) ){  
+                 tempB = 0x10;
+		 }
                  else if( ((PINA+PINB+PINC) > 0x8C)  ) {
                  tempB = 0x01;
                  }
@@ -28,7 +31,9 @@ int main(void) {
 	         else if ( (minus > 0x50)  && (PINA > PINC)){
 		 tempB = 0x10;
                  }
-
+		 else if ( (minus > 0x50)  && (PINA < PINC) ) {
+		 tempB = 0x00;
+                 }
 		
                	 tempA = PINA + PINB + PINC;
 		 tempA = tempA >> 2;
