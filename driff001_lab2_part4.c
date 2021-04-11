@@ -21,17 +21,17 @@ int main(void) {
 		 if ( ((PINA+PINB+PINC) > 0x8C) && (PINA - PINC > 0x50) && (PINA > PINC) ){  
                  tempB = 0x11;
 		 }
-		 else if ( ((PINA+PINB+PINC) > 0x8C) && (PINA - PINC > 0x50) && (PINA < PINC) ){  
+		 if ( ((PINA+PINB+PINC) > 0x8C) && (PINA - PINC > 0x50) && (PINA < PINC) ){  
                  tempB = 0x10;
 		 }
-                 else if( ((PINA+PINB+PINC) > 0x8C)  ) {
+                 if( ((PINA+PINB+PINC) > 0x8C)  ) {
                  tempB = 0x01;
                  }
 
-	         else if ( (PINA-PINC > 0x50)  && (PINA > PINC)){
+	         if ( (PINA-PINC > 0x50)  && (PINA > PINC)){
 		 tempB = 0x10;
                  }
-		 else if ( (PINA-PINC > 0x50)  && (PINA < PINC) ) {
+		 if ( (PINA-PINC > 0x50)  && (PINA < PINC) ) {
 		 tempB = 0x00;
                  }
 		
