@@ -27,7 +27,8 @@ int main(void) {
                  tempB = 0x11;
 		 }
                	 tempA = PINA + PINB + PINC;
-		 tempA = tempA & 0b11111100;
+		 tempA = tempA >>2;
+		 tempA = tempA & 0b111100;
 		 tempA = tempA | tempB;
 		 PORTD = tempA;	
 		 }
